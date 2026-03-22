@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sites-eight-phi.vercel.app/sitemap.xml
