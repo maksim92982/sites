@@ -7,7 +7,7 @@
     <!-- Google Fonts & Font Awesome -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <style>
+    <style>
         * {
             margin: 0;
             padding: 0;
@@ -307,159 +307,159 @@
 </head>
 <body>
 <div class="container">
-    <!-- Левая панель (фиксированная на десктопе) -->
-    <aside class="sidebar">
-        <div>
-            <img class="profile-img" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Артём Смирнов">
-            <h1>Артём Смирнов</h1>
-            <div class="tagline">Frontend-разработчик</div>
-            <p class="description">
-                Создаю современные сайты и веб-приложения под ключ. Помогаю бизнесу и фрилансерам получить быстрый, адаптивный и стильный продукт.
-            </p>
-            <ul class="nav-links">
-                <li><a href="#projects">Проекты</a></li>
-                <li><a href="#experience">Опыт и навыки</a></li>
-                <li><a href="#contact">Контакты</a></li>
-            </ul>
-        </div>
-        <div>
+    <main class="main-content">
+        <div class="info-panel">
+            <div>
+                <img class="profile-img" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Артём Смирнов">
+                <h1>Артём Смирнов</h1>
+                <div class="tagline">Frontend-разработчик</div>
+                <p class="description">Создаю современные сайты и веб-приложения с акцентом на UX, скорость и детали интерфейса.</p>
+            </div>
+            <div class="nav-links">
+                <button type="button" class="nav-link" data-tab="onepage">Проекты</button>
+                <button type="button" class="nav-link" data-tab="corporate">Опыт и навыки</button>
+                <button type="button" class="nav-link" data-tab="contact">Контакты</button>
+            </div>
             <div class="social-links">
                 <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
                 <a href="#" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
                 <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             </div>
-            <div class="sidebar-email">
-                <i class="far fa-envelope"></i> artem@smirnov.dev
+            <div class="sidebar-email"><i class="far fa-envelope"></i> artem@smirnov.dev</div>
+            <div class="info-cta">
+                <p>Готов подключиться к вашему проекту и предложить прозрачные сроки, бюджет и технические решения.</p>
+                <button type="button" class="btn ghost-btn">Скачать резюме</button>
             </div>
         </div>
-    </aside>
-
-    <!-- Правая прокручиваемая область -->
-    <main class="main-content">
-        <div class="types-row">
-            <span>Одностраничный сайт</span>
-            <span>Сайт-визитка</span>
-            <span>Интернет-магазин</span>
-            <span>Корпоративный сайт</span>
-            <span>Блог / персональный сайт</span>
-            <span>Портал / информационный сайт</span>
-            <span>Промо-сайт</span>
+        <div class="content-panel">
+            <div class="tabs-row">
+                <button type="button" class="tab-pill" data-tab="onepage">Одностраничный сайт</button>
+                <button type="button" class="tab-pill" data-tab="visitka">Сайт-визитка</button>
+                <button type="button" class="tab-pill" data-tab="shop">Интернет-магазин</button>
+                <button type="button" class="tab-pill" data-tab="corporate">Корпоративный сайт</button>
+                <button type="button" class="tab-pill" data-tab="blog">Блог / персональный сайт</button>
+                <button type="button" class="tab-pill" data-tab="portal">Портал / информационный сайт</button>
+                <button type="button" class="tab-pill" data-tab="promo">Промо-сайт</button>
+            </div>
+            <div class="panel-view" id="panel-view"></div>
         </div>
-        <!-- Проекты -->
-        <section id="projects">
-            <h2 class="section-title">Проекты</h2>
-
-            <div class="project-card">
-                <div class="project-title">Зелёный дом — лендинг</div>
-                <div class="project-tech">
-                    <span class="tech-tag">HTML5</span>
-                    <span class="tech-tag">CSS3 (Grid/Flex)</span>
-                    <span class="tech-tag">JavaScript</span>
-                    <span class="tech-tag">FormSubmit</span>
-                </div>
-                <div class="project-desc">
-                    Продающий одностраничный сайт для студии заботы о растениях. Адаптивная вёрстка, плавные анимации, форма заказа с отправкой на email.
-                </div>
-                <a href="#" class="project-link">Подробнее <i class="fas fa-arrow-right"></i></a>
-            </div>
-
-            <div class="project-card">
-                <div class="project-title">Портфолио видеографа</div>
-                <div class="project-tech">
-                    <span class="tech-tag">React</span>
-                    <span class="tech-tag">Tailwind CSS</span>
-                    <span class="tech-tag">Framer Motion</span>
-                </div>
-                <div class="project-desc">
-                    Сайт-портфолио с галереей видео, ленивой загрузкой и адаптивом под мобильные устройства.
-                </div>
-                <a href="#" class="project-link">Подробнее <i class="fas fa-arrow-right"></i></a>
-            </div>
-
-            <div class="project-card">
-                <div class="project-title">Корпоративный сайт IT‑агентства</div>
-                <div class="project-tech">
-                    <span class="tech-tag">Tilda</span>
-                    <span class="tech-tag">Zero Block</span>
-                    <span class="tech-tag">HTML/CSS кастомизация</span>
-                </div>
-                <div class="project-desc">
-                    Многостраничный сайт с возможностью самостоятельного редактирования контента клиентом. Интеграция с CRM.
-                </div>
-                <a href="#" class="project-link">Подробнее <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </section>
-
-        <!-- Опыт и навыки -->
-        <section id="experience">
-            <h2 class="section-title">Опыт и навыки</h2>
-            <div class="exp-item">
-                <div class="exp-title">Frontend-разработчик, самозанятый</div>
-                <div class="exp-date">2021 — настоящее время</div>
-                <div>Разработка сайтов для малого бизнеса, интернет-магазинов и портфолио. Полный цикл: от брифа до финального деплоя.</div>
-            </div>
-            <div class="exp-item">
-                <div class="exp-title">Веб-верстальщик в студии "СайтПро"</div>
-                <div class="exp-date">2019 — 2021</div>
-                <div>Вёрстка лендингов и корпоративных сайтов, поддержка проектов на WordPress.</div>
-            </div>
-            <div class="skills-grid">
-                <span class="skill-item">React / Next.js</span>
-                <span class="skill-item">Vue.js</span>
-                <span class="skill-item">Tailwind / SCSS</span>
-                <span class="skill-item">Git & GitHub</span>
-                <span class="skill-item">Figma</span>
-                <span class="skill-item">Node.js (базовый)</span>
-                <span class="skill-item">Tilda / Webflow</span>
-                <span class="skill-item">Адаптивная вёрстка</span>
-            </div>
-        </section>
-
-        <!-- Контакты -->
-        <section id="contact">
-            <h2 class="section-title">Свяжитесь со мной</h2>
-            <div class="contact-form">
-                <form id="demo-form" action="#" method="post">
-                    <div class="form-group">
-                        <input type="text" placeholder="Ваше имя" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Email для ответа" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea rows="4" placeholder="Расскажите о вашем проекте..."></textarea>
-                    </div>
-                    <button type="submit" class="btn">Отправить →</button>
-                </form>
-            </div>
-            <div class="contact-extra">
-                <i class="fas fa-paper-plane"></i> Или пишите напрямую: artem@smirnov.dev | Telegram: @artem_dev
-            </div>
-        </section>
     </main>
 </div>
-
-<!-- Простой скрипт для демонстрации отправки формы (без реальной отправки) -->
 <script>
+const tabData = {
+    onepage: {
+        label: 'Landing & коммерческие страницы',
+        title: 'Одностраничный сайт',
+        description: 'Продающий лендинг с акцентом на продукт, быстро загружается и плавно рассказывает историю с CTA.',
+        highlights: ['Лёгкая анимация', 'Форма заявки + отправка на почту', 'Оптимизация под Core Web Vitals'],
+        footer: 'Пример: «Зелёный дом — лендинг» с интеграцией формы заказа и адаптивным дизайном.'
+    },
+    visitka: {
+        label: 'Мини-сайты для личности',
+        title: 'Сайт-визитка',
+        description: 'Минималистичный профиль с биографией, краткими кейсами, ссылками на соцсети и быстрой связью.',
+        highlights: ['Карта достижений', 'Кнопки соцсетей', 'Лёгкий контактный блок'],
+        footer: 'Идеально подходит для фрилансеров, коучей и фотографов.'
+    },
+    shop: {
+        label: 'Коммерция & каталоги',
+        title: 'Интернет-магазин',
+        description: 'Каталог с фильтрами, карточками и пояснением преимуществ; интеграция оплаты и логистики.',
+        highlights: ['Каталог + фильтры', 'Интеграция с платежными системами', 'Автоматические письма клиенту'],
+        footer: 'Использую headless CMS и Stripe/PayPal для быстрой публикации.'
+    },
+    corporate: {
+        label: 'Брендовые порталы',
+        title: 'Корпоративный сайт',
+        description: 'Многостраничный проект для агентства или команды с блоками кейсов, услуг и командой.',
+        highlights: ['Лидогенерация через формы', 'Интеграция CRM', 'Блог и новости компании'],
+        footer: 'Образец: «Корпоративный сайт IT‑агентства» с админкой для клиента.'
+    },
+    blog: {
+        label: 'Истории и публикации',
+        title: 'Блог / персональный сайт',
+        description: 'Структурированный блог, где легко публиковать статьи, вести рубрики и размещать подписку.',
+        highlights: ['Архив статей', 'Подписка и новости', 'SEO-оптимизированный текст'],
+        footer: 'Подходит для авторов, коучей и продуктовых команд.'
+    },
+    portal: {
+        label: 'Информационные платформы',
+        title: 'Портал / информационный сайт',
+        description: 'Сборник материалов: новости, базы знаний, расписания; быстрый поиск и фильтры.',
+        highlights: ['Категории и фильтры', 'Комбинация статей и данных', 'Админская часть'],
+        footer: 'Часто создаю на базе Next.js + headless CMS / Airtable.'
+    },
+    promo: {
+        label: 'Акции & кампании',
+        title: 'Промо-сайт',
+        description: 'Целенаправленный лендинг под кампанию, акция или запуск услуги с CTA и социальным proof.',
+        highlights: ['УТП + выгоды', 'Яркая визуальная секция', 'Конверсионные блоки'],
+        footer: 'Запускаю за 1‑2 недели с отчётами по результатам.'
+    },
+    contact: {
+        label: 'Контакты и заявки',
+        title: 'Свяжитесь со мной',
+        description: 'Отвечаю в течение рабочего дня, обсуждаю требования и составляю прозрачные предложения.',
+        highlights: ['Быстрый ответ', 'Точные оценки сроков и бюджета', 'Поддержка после релиза'],
+        extra: `<div class="panel-block">
+            <form id="demo-form" class="contact-form" action="#" method="post">
+                <input type="text" name="name" placeholder="Ваше имя" required>
+                <input type="email" name="email" placeholder="Email для ответа" required>
+                <textarea name="details" rows="4" placeholder="Расскажите о проекте..."></textarea>
+                <button type="submit" class="btn">Отправить →</button>
+            </form>
+        </div>`,
+        footer: '<i class="fas fa-paper-plane"></i> artem@smirnov.dev / Telegram: @artem_dev'
+    }
+};
+
+const panelView = document.getElementById('panel-view');
+const tabButtons = document.querySelectorAll('.tab-pill');
+const navLinks = document.querySelectorAll('.nav-link');
+
+const renderPanel = (tabId) => {
+    const data = tabData[tabId];
+    if (!data) {
+        return;
+    }
+    const tags = (data.highlights || [])
+        .map(item => `<span>${item}</span>`)
+        .join('');
+
+    panelView.innerHTML = `
+        <div class="panel-block">
+            <p class="panel-label">${data.label}</p>
+            <h3 class="panel-title">${data.title}</h3>
+            <p class="panel-description">${data.description}</p>
+            ${tags ? `<div class="panel-tags">${tags}</div>` : ''}
+        </div>
+        ${data.extra || ''}
+        ${data.footer ? `<div class="panel-footer">${data.footer}</div>` : ''}
+    `;
+};
+
+const attachFormHandler = () => {
     const form = document.getElementById('demo-form');
     if (form) {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
             alert('Демо-режим: форма не отправляется. В реальном проекте добавьте обработку на сервер.');
+            form.reset();
         });
     }
+};
 
-    // Плавная прокрутка для навигации (дополнительно, чтобы перекрыть фиксированную шапку на мобилке)
-    document.querySelectorAll('.nav-links a').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const target = document.getElementById(targetId);
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        });
-    });
+const setActiveTab = (tabId) => {
+    renderPanel(tabId);
+    attachFormHandler();
+    tabButtons.forEach(btn => btn.classList.toggle('is-active', btn.dataset.tab === tabId));
+    navLinks.forEach(btn => btn.classList.toggle('active', btn.dataset.tab === tabId));
+};
+
+tabButtons.forEach(btn => btn.addEventListener('click', () => setActiveTab(btn.dataset.tab)));
+navLinks.forEach(btn => btn.addEventListener('click', () => setActiveTab(btn.dataset.tab)));
+
+setActiveTab('onepage');
 </script>
 </body>
 </html>
