@@ -127,9 +127,25 @@
             color: #7ed2ff;
         }
 
-        .sidebar-email {
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
             font-size: 0.9rem;
-            color: #a3adb6;
+            color: #cfd8e4;
+        }
+
+        .contact-details a {
+            color: #cfd8e4;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: color 0.2s;
+        }
+
+        .contact-details a:hover {
+            color: #7ed2ff;
         }
 
         .info-cta {
@@ -390,8 +406,8 @@
     <main class="main-content">
         <div class="info-panel">
             <div>
-                <img class="profile-img" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Артём Смирнов">
-                <h1>Артём Смирнов</h1>
+                <img class="profile-img" src="assets/IMG_1861-b47e9f6a-c284-49b3-b965-62e35f0e84dd.png" alt="Максим Александров">
+                <h1>Максим Александров</h1>
                 <div class="tagline">Frontend-разработчик</div>
                 <p class="description">Создаю современные сайты и веб-приложения с акцентом на UX, скорость и детали интерфейса.</p>
             </div>
@@ -403,9 +419,12 @@
             <div class="social-links">
                 <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
                 <a href="#" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
-                <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             </div>
-            <div class="sidebar-email"><i class="far fa-envelope"></i> artem@smirnov.dev</div>
+            <div class="contact-details">
+                <a href="mailto:ma89spb@gmail.com"><i class="far fa-envelope"></i> ma89spb@gmail.com</a>
+                <a href="tel:+79533736073"><i class="fas fa-phone-alt"></i> +7 953 373-60-73</a>
+                <a href="https://t.me/maxsim_alex" target="_blank" rel="noreferrer"><i class="fab fa-telegram"></i> @maxsim_alex</a>
+            </div>
             <div class="info-cta">
                 <p>Готов подключиться к вашему проекту и предложить прозрачные сроки, бюджет и технические решения.</p>
                 <button type="button" class="btn ghost-btn">Скачать резюме</button>
@@ -480,7 +499,7 @@ const tabData = {
                 <button type="submit" class="btn">Отправить →</button>
             </form>
         </div>`,
-        footer: '<i class="fas fa-paper-plane"></i> artem@smirnov.dev / Telegram: @artem_dev'
+        footer: '<i class="fas fa-paper-plane"></i> ma89spb@gmail.com / <i class="fab fa-telegram"></i> @maxsim_alex / <i class="fas fa-phone-alt"></i> +7 953 373-60-73'
     }
 };
 
