@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Артём Смирнов | Разработка сайтов на заказ</title>
+    <!-- Google Fonts & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #e5e5e5;
+            line-height: 1.5;
+        }
+
+        /* ---------- SPLIT LAYOUT (DESKTOP) ---------- */
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Левая фиксированная панель */
+        .sidebar {
+            width: 34%;
+            background: #0f0f0f;
+            padding: 3rem 2rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-right: 1px solid rgba(255, 255, 255, 0.05);
+            overflow-y: auto;
+            z-index: 10;
+        }
+
+        /* Правая прокручиваемая область */
+        .main-content {
+            width: 66%;
+            margin-left: 34%;
+            background: #0a0a0a;
+            padding: 3rem 2.5rem;
+        }
+
+        /* ---------- СТИЛИ ЛЕВОЙ ПАНЕЛИ ---------- */
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #2e9cff;
+            margin-bottom: 1.5rem;
+            background: #1e1e1e;
+        }
+
+        .sidebar h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .sidebar .tagline {
+            font-size: 1.1rem;
+            color: #2e9cff;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .sidebar .description {
+            font-size: 0.95rem;
+            color: #b0b0b0;
+            margin-bottom: 2rem;
+            line-height: 1.5;
+        }
+
+        /* Навигация */
+        .nav-links {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .nav-links li {
+            margin-bottom: 1rem;
+        }
+
+        .nav-links a {
+            color: #ccc;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.2s;
+            display: inline-block;
+        }
+
+        .nav-links a:hover {
+            color: #2e9cff;
+        }
+
+        /* Соцсети и контакт */
+        .social-links {
+            display: flex;
+            gap: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links a {
+            color: #aaa;
+            font-size: 1.3rem;
+            transition: color 0.2s;
+        }
+
+        .social-links a:hover {
+            color: #2e9cff;
+        }
+
+        .sidebar-email {
+            font-size: 0.85rem;
+            color: #888;
+            word-break: break-all;
+        }
+
+        /* ---------- ПРАВАЯ ЧАСТЬ ---------- */
+        section {
+            margin-bottom: 4rem;
+            scroll-margin-top: 1rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            letter-spacing: -0.01em;
+            border-left: 4px solid #2e9cff;
+            padding-left: 1rem;
+        }
+
+        /* Карточки проектов */
+        .project-card {
+            background: #111;
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            transition: transform 0.2s, border-color 0.2s;
+            border: 1px solid #222;
+        }
+
+        .project-card:hover {
+            border-color: #2e9cff;
+            transform: translateY(-3px);
+        }
+
+        .project-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 0.75rem 0;
+        }
+
+        .tech-tag {
+            background: #1e1e1e;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: #2e9cff;
+        }
+
+        .project-desc {
+            margin: 1rem 0;
+            color: #bbb;
+            font-size: 0.95rem;
+        }
+
+        .project-link {
+            color: #2e9cff;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .project-link i {
+            font-size: 0.8rem;
+        }
+
+        /* Опыт / навыки */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+
+        .skill-item {
+            background: #111;
+            border-radius: 40px;
+            padding: 0.5rem 1.2rem;
+            font-size: 0.9rem;
+            border: 1px solid #222;
+        }
+
+        .exp-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .exp-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .exp-date {
+            font-size: 0.8rem;
+            color: #888;
+            margin-bottom: 0.3rem;
+        }
+
+        /* Контакты */
+        .contact-form {
+            background: #111;
+            padding: 1.5rem;
+            border-radius: 20px;
+            border: 1px solid #222;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 12px;
+            color: #fff;
+            font-family: inherit;
+            font-size: 0.9rem;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #2e9cff;
+        }
+
+        .btn {
+            background: #2e9cff;
+            color: #fff;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 40px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn:hover {
+            background: #1a7fcc;
+        }
+
+        .contact-extra {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        /* ---------- АДАПТИВНОСТЬ (МОБИЛЬНЫЙ) ---------- */
+        @media (max-width: 768px) {
+            .sidebar {
+                position: relative;
+                width: 100%;
+                height: auto;
+                padding: 2rem 1.5rem;
+                border-right: none;
+                border-bottom: 1px solid rgba(255,255,255,0.05);
+            }
+            .main-content {
+                width: 100%;
+                margin-left: 0;
+                padding: 2rem 1.5rem;
+            }
+            .profile-img {
+                width: 120px;
+                height: 120px;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- Левая панель (фиксированная на десктопе) -->
+    <aside class="sidebar">
+        <div>
+            <img class="profile-img" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Артём Смирнов">
+            <h1>Артём Смирнов</h1>
+            <div class="tagline">Frontend-разработчик</div>
+            <p class="description">
+                Создаю современные сайты и веб-приложения под ключ. Помогаю бизнесу и фрилансерам получить быстрый, адаптивный и стильный продукт.
+            </p>
+            <ul class="nav-links">
+                <li><a href="#projects">Проекты</a></li>
+                <li><a href="#experience">Опыт и навыки</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </div>
+        <div>
+            <div class="social-links">
+                <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="sidebar-email">
+                <i class="far fa-envelope"></i> artem@smirnov.dev
+            </div>
+        </div>
+    </aside>
+
+    <!-- Правая прокручиваемая область -->
+    <main class="main-content">
+        <!-- Проекты -->
+        <section id="projects">
+            <h2 class="section-title">Проекты</h2>
+
+            <div class="project-card">
+                <div class="project-title">Зелёный дом — лендинг</div>
+                <div class="project-tech">
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">CSS3 (Grid/Flex)</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">FormSubmit</span>
+                </div>
+                <div class="project-desc">
+                    Продающий одностраничный сайт для студии заботы о растениях. Адаптивная вёрстка, плавные анимации, форма заказа с отправкой на email.
+                </div>
+                <a href="#" class="project-link">Подробнее <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title">Портфолио видеографа</div>
+                <div class="project-tech">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Tailwind CSS</span>
+                    <span class="tech-tag">Framer Motion</span>
+                </div>
+                <div class="project-desc">
+                    Сайт-портфолио с галереей видео, ленивой загрузкой и адаптивом под мобильные устройства.
+                </div>
+                <a href="#" class="project-link">Подробнее <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title">Корпоративный сайт IT‑агентства</div>
+                <div class="project-tech">
+                    <span class="tech-tag">Tilda</span>
+                    <span class="tech-tag">Zero Block</span>
+                    <span class="tech-tag">HTML/CSS кастомизация</span>
+                </div>
+                <div class="project-desc">
+                    Многостраничный сайт с возможностью самостоятельного редактирования контента клиентом. Интеграция с CRM.
+                </div>
+                <a href="#" class="project-link">Подробнее <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+        <!-- Опыт и навыки -->
+        <section id="experience">
+            <h2 class="section-title">Опыт и навыки</h2>
+            <div class="exp-item">
+                <div class="exp-title">Frontend-разработчик, самозанятый</div>
+                <div class="exp-date">2021 — настоящее время</div>
+                <div>Разработка сайтов для малого бизнеса, интернет-магазинов и портфолио. Полный цикл: от брифа до финального деплоя.</div>
+            </div>
+            <div class="exp-item">
+                <div class="exp-title">Веб-верстальщик в студии "СайтПро"</div>
+                <div class="exp-date">2019 — 2021</div>
+                <div>Вёрстка лендингов и корпоративных сайтов, поддержка проектов на WordPress.</div>
+            </div>
+            <div class="skills-grid">
+                <span class="skill-item">React / Next.js</span>
+                <span class="skill-item">Vue.js</span>
+                <span class="skill-item">Tailwind / SCSS</span>
+                <span class="skill-item">Git & GitHub</span>
+                <span class="skill-item">Figma</span>
+                <span class="skill-item">Node.js (базовый)</span>
+                <span class="skill-item">Tilda / Webflow</span>
+                <span class="skill-item">Адаптивная вёрстка</span>
+            </div>
+        </section>
+
+        <!-- Контакты -->
+        <section id="contact">
+            <h2 class="section-title">Свяжитесь со мной</h2>
+            <div class="contact-form">
+                <form id="demo-form" action="#" method="post">
+                    <div class="form-group">
+                        <input type="text" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email для ответа" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="4" placeholder="Расскажите о вашем проекте..."></textarea>
+                    </div>
+                    <button type="submit" class="btn">Отправить →</button>
+                </form>
+            </div>
+            <div class="contact-extra">
+                <i class="fas fa-paper-plane"></i> Или пишите напрямую: artem@smirnov.dev | Telegram: @artem_dev
+            </div>
+        </section>
+    </main>
+</div>
+
+<!-- Простой скрипт для демонстрации отправки формы (без реальной отправки) -->
+<script>
+    const form = document.getElementById('demo-form');
+    if (form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Демо-режим: форма не отправляется. В реальном проекте добавьте обработку на сервер.');
+        });
+    }
+
+    // Плавная прокрутка для навигации (дополнительно, чтобы перекрыть фиксированную шапку на мобилке)
+    document.querySelectorAll('.nav-links a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const target = document.getElementById(targetId);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+</script>
+</body>
+</html>
