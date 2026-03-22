@@ -278,6 +278,21 @@
             font-size: 0.8rem;
             color: #e5e5e5;
         }
+        .project-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+            padding: 0;
+        }
+
+        .project-links li a {
+            color: #7ed2ff;
+            text-decoration: none;
+            font-weight: 500;
+            word-break: break-all;
+        }
 
         .contact-form {
             display: flex;
@@ -423,6 +438,13 @@ const tabData = {
         title: 'Одностраничный сайт',
         description: 'Продающий лендинг с акцентом на продукт, быстро загружается и плавно рассказывает историю с CTA.',
         highlights: ['Лёгкая анимация', 'Форма заявки + отправка на почту', 'Оптимизация под Core Web Vitals'],
+        extra: `<div class="panel-block">
+            <p class="panel-label">Примеры проектов</p>
+            <ul class="project-links">
+                <li><a href="https://chess-spb.ru" target="_blank" rel="noreferrer">chess-spb.ru</a></li>
+                <li><a href="https://janart-studio.ru" target="_blank" rel="noreferrer">janart-studio.ru</a></li>
+            </ul>
+        </div>`,
         footer: 'Пример: «Зелёный дом — лендинг» с интеграцией формы заказа и адаптивным дизайном.'
     },
     visitka: {
