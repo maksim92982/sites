@@ -52,6 +52,37 @@
             padding: 3rem 2.5rem;
         }
 
+        .types-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+            position: sticky;
+            top: 1rem;
+            padding: 0.75rem 1rem;
+            border-radius: 18px;
+            background: rgba(10, 10, 10, 0.88);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            z-index: 5;
+        }
+
+        .types-row span {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.7rem 1.2rem;
+            border-radius: 5px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            background: #171717;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: #e5e5e5;
+            text-transform: none;
+            min-width: 120px;
+            text-align: center;
+        }
+
         /* ---------- СТИЛИ ЛЕВОЙ ПАНЕЛИ ---------- */
         .profile-img {
             width: 160px;
@@ -343,6 +374,15 @@
 
     <!-- Правая прокручиваемая область -->
     <main class="main-content">
+        <div class="types-row">
+            <span>Одностраничный сайт</span>
+            <span>Сайт-визитка</span>
+            <span>Интернет-магазин</span>
+            <span>Корпоративный сайт</span>
+            <span>Блог / персональный сайт</span>
+            <span>Портал / информационный сайт</span>
+            <span>Промо-сайт</span>
+        </div>
         <!-- Проекты -->
         <section id="projects">
             <h2 class="section-title">Проекты</h2>
