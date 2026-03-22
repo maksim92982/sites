@@ -164,10 +164,9 @@
             border-radius: 5px;
             padding: 0.95rem 1.4rem;
             background: rgba(255, 255, 255, 0.03);
-            color: #d9dde2;
             font-size: 0.85rem;
             cursor: pointer;
-            font-weight: 500;
+            font-weight: 600;
             white-space: normal;
             transition: background 0.2s, border 0.2s, color 0.2s;
             flex: 1;
@@ -179,6 +178,9 @@
             align-items: center;
             justify-content: center;
             gap: 0.25rem;
+            color: #fbe8c4;
+            font-family: 'JetBrains Mono', 'Source Code Pro', monospace;
+            letter-spacing: 0.02em;
         }
         .tab-pill span {
             display: block;
@@ -192,59 +194,26 @@
             color: rgba(255, 255, 255, 0.6);
             text-transform: none;
         }
-        .tab-onepage {
-            font-size: 0.9rem;
-            letter-spacing: 0.04em;
-            font-family: 'Fira Code', 'JetBrains Mono', monospace;
+        .tab-onepage .tab-pill-primary,
+        .tab-visitka .tab-pill-primary,
+        .tab-shop .tab-pill-primary,
+        .tab-corporate .tab-pill-primary,
+        .tab-blog .tab-pill-primary,
+        .tab-portal .tab-pill-primary,
+        .tab-promo .tab-pill-primary {
+            font-size: 0.85rem;
+            letter-spacing: 0.03em;
+            color: inherit;
         }
-        .tab-onepage .tab-pill-secondary {
+        .tab-onepage .tab-pill-secondary,
+        .tab-visitka .tab-pill-secondary,
+        .tab-shop .tab-pill-secondary,
+        .tab-corporate .tab-pill-secondary,
+        .tab-blog .tab-pill-secondary,
+        .tab-portal .tab-pill-secondary,
+        .tab-promo .tab-pill-secondary {
             font-size: 0.7rem;
-        }
-        .tab-visitka {
-            font-weight: 600;
-            color: #fbe8c4;
-            font-family: 'JetBrains Mono', 'Source Code Pro', monospace;
-        }
-        .tab-visitka .tab-pill-secondary {
             color: rgba(251, 232, 196, 0.7);
-        }
-        .tab-shop {
-            font-size: 0.86rem;
-            color: #cde1ff;
-            text-shadow: 0 0 6px rgba(205, 225, 255, 0.6);
-            font-family: 'Space Mono', 'IBM Plex Mono', monospace;
-        }
-        .tab-shop .tab-pill-secondary {
-            color: rgba(205, 225, 255, 0.7);
-        }
-        .tab-corporate {
-            font-size: 0.8rem;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            font-family: 'Inconsolata', 'Share Tech Mono', monospace;
-        }
-        .tab-blog .tab-pill-primary {
-            font-size: 0.92rem;
-            letter-spacing: 0.06em;
-            font-family: 'Share Tech Mono', 'Source Code Pro', monospace;
-        }
-        .tab-blog .tab-pill-secondary {
-            font-style: italic;
-        }
-        .tab-portal .tab-pill-primary {
-            font-size: 0.9rem;
-            color: #d5fffe;
-            font-family: 'Source Code Pro', 'Fira Code', monospace;
-        }
-        .tab-portal .tab-pill-secondary {
-            color: rgba(213, 255, 254, 0.75);
-            letter-spacing: 0.08em;
-        }
-        .tab-promo {
-            font-size: 0.88rem;
-            font-weight: 600;
-            color: #ffd7f4;
-            font-family: 'IBM Plex Mono', 'JetBrains Mono', monospace;
         }
 
         .tab-pill.is-active {
