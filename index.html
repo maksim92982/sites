@@ -33,7 +33,7 @@
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: minmax(280px, 1fr) minmax(520px, 1.25fr);
+            grid-template-columns: minmax(220px, 1fr) minmax(640px, 1.8fr);
             gap: 1.5rem;
         }
 
@@ -382,6 +382,9 @@
 <body>
 <div class="container">
         <div class="tabs-row">
+            <button type="button" class="tab-pill tab-pricing" data-tab="pricing">
+                <span class="tab-pill-primary">Цены на услуги</span>
+            </button>
             <button type="button" class="tab-pill tab-onepage" data-tab="onepage">
                 <span class="tab-pill-primary">Одностраничный сайт</span>
             </button>
@@ -436,6 +439,13 @@
 </div>
 <script>
 const tabData = {
+    pricing: {
+        label: 'Как взаимодействуем',
+        title: 'Цены на услуги',
+        description: 'Взаимодействие осуществляется следующим образом: сначала 30-минутный звонок, в рамках которого вы рассказываете о задачах и демонстрируете или описываете макет, цвета и нюансы.',
+        highlights: ['После этого я реализовываю сайт, вы его смотрите и даёте обратную связь', 'На этапе корректировок вы сообщаете замечания', 'Я финализирую проект и подготавливаю к релизу'],
+        footer: 'Стоимость рассчитывается по задачам и согласовывается после звонка.'
+    },
     onepage: {
         label: 'Landing & коммерческие страницы',
         title: 'Одностраничный сайт',
