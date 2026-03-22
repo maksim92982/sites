@@ -90,30 +90,26 @@
         }
 
         .nav-link {
-            border: 1px solid rgba(158, 214, 255, 0.5);
-            background: rgba(16, 33, 54, 0.8);
-            color: #9cd8ff;
-            text-align: center;
-            padding: 0.9rem 1.2rem;
-            border-radius: 999px;
-            font-weight: 600;
+            border: none;
+            background: rgba(255, 255, 255, 0.04);
+            color: #cdd6e0;
+            text-align: left;
+            padding: 0.6rem 1rem;
+            border-radius: 14px;
+            font-weight: 500;
             cursor: pointer;
-            transition: border 0.2s, background 0.2s;
-            min-width: 160px;
-            font-size: 0.95rem;
-            letter-spacing: 0.02em;
-            font-family: 'JetBrains Mono', 'Source Code Pro', monospace;
+            transition: background 0.2s, color 0.2s;
         }
 
         .nav-link:hover {
-            border-color: rgba(158, 214, 255, 0.9);
-            background: rgba(46, 75, 124, 0.6);
+            background: rgba(46, 156, 255, 0.15);
+            color: #fff;
         }
 
         .nav-link.active {
-            border-color: rgba(158, 214, 255, 1);
-            background: rgba(46, 75, 124, 0.8);
-            color: #e1f5ff;
+            background: rgba(46, 156, 255, 0.25);
+            color: #fff;
+            box-shadow: inset 0 0 0 1px rgba(46, 156, 255, 0.6);
         }
 
         .contact-details {
@@ -427,6 +423,7 @@
             </div>
             <div class="info-cta">
                 <p>Готов подключиться к вашему проекту и предложить прозрачные сроки, бюджет и технические решения.</p>
+                <button type="button" class="btn ghost-btn">Скачать резюме</button>
             </div>
         </div>
         <div class="content-panel">
