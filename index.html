@@ -191,6 +191,53 @@
             color: rgba(255, 255, 255, 0.6);
             text-transform: none;
         }
+        .tab-onepage {
+            font-size: 0.9rem;
+            letter-spacing: 0.04em;
+        }
+        .tab-onepage .tab-pill-secondary {
+            font-size: 0.7rem;
+        }
+        .tab-visitka {
+            font-weight: 600;
+            color: #fbe8c4;
+        }
+        .tab-visitka .tab-pill-secondary {
+            color: rgba(251, 232, 196, 0.7);
+        }
+        .tab-shop {
+            font-size: 0.86rem;
+            color: #cde1ff;
+            text-shadow: 0 0 6px rgba(205, 225, 255, 0.6);
+        }
+        .tab-shop .tab-pill-secondary {
+            color: rgba(205, 225, 255, 0.7);
+        }
+        .tab-corporate {
+            font-size: 0.8rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+        .tab-blog .tab-pill-primary {
+            font-size: 0.92rem;
+            letter-spacing: 0.06em;
+        }
+        .tab-blog .tab-pill-secondary {
+            font-style: italic;
+        }
+        .tab-portal .tab-pill-primary {
+            font-size: 0.9rem;
+            color: #d5fffe;
+        }
+        .tab-portal .tab-pill-secondary {
+            color: rgba(213, 255, 254, 0.75);
+            letter-spacing: 0.08em;
+        }
+        .tab-promo {
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: #ffd7f4;
+        }
 
         .tab-pill.is-active {
             background: linear-gradient(135deg, #2e9cff, #7ed2ff);
@@ -334,27 +381,27 @@
 <body>
 <div class="container">
         <div class="tabs-row">
-            <button type="button" class="tab-pill" data-tab="onepage">
+            <button type="button" class="tab-pill tab-onepage" data-tab="onepage">
                 <span class="tab-pill-primary">Одностраничный сайт</span>
             </button>
-            <button type="button" class="tab-pill" data-tab="visitka">
+            <button type="button" class="tab-pill tab-visitka" data-tab="visitka">
                 <span class="tab-pill-primary">Сайт-визитка</span>
             </button>
-            <button type="button" class="tab-pill" data-tab="shop">
+            <button type="button" class="tab-pill tab-shop" data-tab="shop">
                 <span class="tab-pill-primary">Интернет-магазин</span>
             </button>
-            <button type="button" class="tab-pill" data-tab="corporate">
+            <button type="button" class="tab-pill tab-corporate" data-tab="corporate">
                 <span class="tab-pill-primary">Корпоративный сайт</span>
             </button>
-            <button type="button" class="tab-pill" data-tab="blog">
+            <button type="button" class="tab-pill tab-blog" data-tab="blog">
                 <span class="tab-pill-primary">Блог</span>
                 <span class="tab-pill-secondary">персональный сайт</span>
             </button>
-            <button type="button" class="tab-pill" data-tab="portal">
+            <button type="button" class="tab-pill tab-portal" data-tab="portal">
                 <span class="tab-pill-primary">Портал</span>
                 <span class="tab-pill-secondary">информационный сайт</span>
             </button>
-            <button type="button" class="tab-pill" data-tab="promo">
+            <button type="button" class="tab-pill tab-promo" data-tab="promo">
                 <span class="tab-pill-primary">Промо-сайт</span>
             </button>
         </div>
