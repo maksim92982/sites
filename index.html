@@ -146,14 +146,14 @@
         .tabs-row {
             display: flex;
             flex-wrap: nowrap;
-            gap: 0.75rem;
+            gap: 0.5rem;
             border-radius: 18px;
             padding: 0.5rem;
             background: rgba(255, 255, 255, 0.02);
             border: 1px solid rgba(255, 255, 255, 0.05);
-            overflow-x: auto;
-            position: sticky;
-            top: -1px;
+            width: 100%;
+            justify-content: space-between;
+            overflow: hidden;
         }
 
         .tab-pill {
@@ -162,11 +162,14 @@
             padding: 0.65rem 1.2rem;
             background: rgba(255, 255, 255, 0.03);
             color: #d9dde2;
-            font-size: 0.85rem;
+            font-size: 0.78rem;
             cursor: pointer;
             font-weight: 500;
             white-space: nowrap;
             transition: background 0.2s, border 0.2s, color 0.2s;
+            flex: 1;
+            text-align: center;
+            min-width: 100px;
         }
 
         .tab-pill.is-active {
@@ -307,6 +310,15 @@
 </head>
 <body>
 <div class="container">
+    <div class="tabs-row">
+        <button type="button" class="tab-pill" data-tab="onepage">Одностраничный сайт</button>
+        <button type="button" class="tab-pill" data-tab="visitka">Сайт-визитка</button>
+        <button type="button" class="tab-pill" data-tab="shop">Интернет-магазин</button>
+        <button type="button" class="tab-pill" data-tab="corporate">Корпоративный сайт</button>
+        <button type="button" class="tab-pill" data-tab="blog">Блог / персональный сайт</button>
+        <button type="button" class="tab-pill" data-tab="portal">Портал / информационный сайт</button>
+        <button type="button" class="tab-pill" data-tab="promo">Промо-сайт</button>
+    </div>
     <main class="main-content">
         <div class="info-panel">
             <div>
@@ -332,15 +344,6 @@
             </div>
         </div>
         <div class="content-panel">
-            <div class="tabs-row">
-                <button type="button" class="tab-pill" data-tab="onepage">Одностраничный сайт</button>
-                <button type="button" class="tab-pill" data-tab="visitka">Сайт-визитка</button>
-                <button type="button" class="tab-pill" data-tab="shop">Интернет-магазин</button>
-                <button type="button" class="tab-pill" data-tab="corporate">Корпоративный сайт</button>
-                <button type="button" class="tab-pill" data-tab="blog">Блог / персональный сайт</button>
-                <button type="button" class="tab-pill" data-tab="portal">Портал / информационный сайт</button>
-                <button type="button" class="tab-pill" data-tab="promo">Промо-сайт</button>
-            </div>
             <div class="panel-view" id="panel-view"></div>
         </div>
     </main>
