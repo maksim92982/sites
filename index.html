@@ -168,7 +168,7 @@
             cursor: pointer;
             font-weight: 600;
             white-space: normal;
-            transition: background 0.2s, border 0.2s, color 0.2s, opacity 0.2s;
+            transition: background 0.2s, border 0.2s, color 0.2s;
             flex: 1;
             text-align: center;
             min-width: 120px;
@@ -183,10 +183,10 @@
             letter-spacing: 0.02em;
         }
         .tab-pill:hover {
-            opacity: 0.65;
-        }
-        .tab-pill.is-active {
-            opacity: 1;
+            background: linear-gradient(180deg, rgba(2, 132, 255, 0.95), rgba(0, 105, 255, 0.9));
+            color: #fdfefe;
+            border-color: rgba(42, 155, 255, 0.7);
+            box-shadow: 0 0 20px rgba(2, 132, 255, 0.6);
         }
         .tab-pill span {
             display: block;
@@ -197,7 +197,7 @@
         }
         .tab-pill-secondary {
             font-size: 0.75rem;
-            color: rgba(255, 255, 255, 0.6);
+            color: #9cd8ff;
             text-transform: none;
         }
         .tab-onepage .tab-pill-primary,
@@ -219,7 +219,7 @@
         .tab-portal .tab-pill-secondary,
         .tab-promo .tab-pill-secondary {
             font-size: 0.7rem;
-            color: rgba(251, 232, 196, 0.7);
+            color: #9cd8ff;
         }
 
         .tab-pill.is-active {
