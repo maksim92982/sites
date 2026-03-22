@@ -524,11 +524,18 @@ const setActiveTab = (tabId) => {
     renderPanel(tabId);
     attachFormHandler();
     tabButtons.forEach(btn => btn.classList.toggle('is-active', btn.dataset.tab === tabId));
+    navLinks.forEach(btn => btn.classList.remove('active'));
+};
+
+const setActiveByNav = (tabId) => {
+    renderPanel(tabId);
+    attachFormHandler();
+    tabButtons.forEach(btn => btn.classList.remove('is-active'));
     navLinks.forEach(btn => btn.classList.toggle('active', btn.dataset.tab === tabId));
 };
 
 tabButtons.forEach(btn => btn.addEventListener('click', () => setActiveTab(btn.dataset.tab)));
-navLinks.forEach(btn => btn.addEventListener('click', () => setActiveTab(btn.dataset.tab)));
+navLinks.forEach(btn => btn.addEventListener('click', () => setActiveByNav(btn.dataset.tab)));
 
 setActiveTab('onepage');
 </script>
