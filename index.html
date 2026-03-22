@@ -90,15 +90,15 @@
         }
 
         .nav-link {
-            border: none;
-            background: linear-gradient(135deg, #2e9cff, #5ac5ff);
-            color: #02050a;
+            border: 1px solid rgba(158, 214, 255, 0.5);
+            background: rgba(16, 33, 54, 0.8);
+            color: #9cd8ff;
             text-align: center;
             padding: 0.9rem 1.2rem;
             border-radius: 999px;
             font-weight: 600;
             cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+            transition: border 0.2s, background 0.2s;
             min-width: 160px;
             font-size: 0.95rem;
             letter-spacing: 0.02em;
@@ -106,15 +106,14 @@
         }
 
         .nav-link:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(46, 156, 255, 0.35);
-            background: linear-gradient(135deg, #1f8bff, #3ea9ff);
+            border-color: rgba(158, 214, 255, 0.9);
+            background: rgba(46, 75, 124, 0.6);
         }
 
         .nav-link.active {
-            background: linear-gradient(135deg, #2e9cff, #7ed2ff);
-            color: #02050a;
-            box-shadow: 0 10px 25px rgba(46, 156, 255, 0.45);
+            border-color: rgba(158, 214, 255, 1);
+            background: rgba(46, 75, 124, 0.8);
+            color: #e1f5ff;
         }
 
         .contact-details {
