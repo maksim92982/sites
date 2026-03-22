@@ -174,8 +174,10 @@
             min-width: 120px;
             min-height: 62px;
             display: inline-flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
+            gap: 0.25rem;
         }
         .tab-pill span {
             display: block;
@@ -332,10 +334,18 @@
 <body>
 <div class="container">
         <div class="tabs-row">
-            <button type="button" class="tab-pill" data-tab="onepage">Одностраничный сайт</button>
-            <button type="button" class="tab-pill" data-tab="visitka">Сайт-визитка</button>
-            <button type="button" class="tab-pill" data-tab="shop">Интернет-магазин</button>
-            <button type="button" class="tab-pill" data-tab="corporate">Корпоративный сайт</button>
+            <button type="button" class="tab-pill" data-tab="onepage">
+                <span class="tab-pill-primary">Одностраничный сайт</span>
+            </button>
+            <button type="button" class="tab-pill" data-tab="visitka">
+                <span class="tab-pill-primary">Сайт-визитка</span>
+            </button>
+            <button type="button" class="tab-pill" data-tab="shop">
+                <span class="tab-pill-primary">Интернет-магазин</span>
+            </button>
+            <button type="button" class="tab-pill" data-tab="corporate">
+                <span class="tab-pill-primary">Корпоративный сайт</span>
+            </button>
             <button type="button" class="tab-pill" data-tab="blog">
                 <span class="tab-pill-primary">Блог</span>
                 <span class="tab-pill-secondary">персональный сайт</span>
@@ -344,7 +354,9 @@
                 <span class="tab-pill-primary">Портал</span>
                 <span class="tab-pill-secondary">информационный сайт</span>
             </button>
-            <button type="button" class="tab-pill" data-tab="promo">Промо-сайт</button>
+            <button type="button" class="tab-pill" data-tab="promo">
+                <span class="tab-pill-primary">Промо-сайт</span>
+            </button>
         </div>
     <main class="main-content">
         <div class="info-panel">
