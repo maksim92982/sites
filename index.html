@@ -230,7 +230,14 @@
             background: rgba(46, 156, 255, 0.25);
             color: #fff;
             border-color: transparent;
-            box-shadow: inset 0 0 0 1px rgba(46, 156, 255, 0.6);
+            box-shadow: inset 0 0 0 1px rgba(46, 156, 255, 0.6), 0 10px 20px rgba(46, 156, 255, 0.35);
+            transform: translateY(-2px);
+        }
+        .tab-pill.is-active {
+            background: rgba(46, 156, 255, 0.15);
+            color: #fff;
+            box-shadow: inset 0 0 0 1px rgba(46, 156, 255, 0.6), 0 10px 20px rgba(46, 156, 255, 0.35);
+            transform: translateY(-2px);
         }
 
         .panel-view {
@@ -386,13 +393,16 @@
                 <button type="button" class="tab-pill tab-onepage" data-tab="onepage">
                     <span class="tab-pill-primary">Одностраничный сайт</span>
                 </button>
+                <button type="button" class="tab-pill tab-from-scratch" data-tab="fromScratch">
+                    <span class="tab-pill-primary">Сайт с нуля</span>
+                </button>
             <button type="button" class="tab-pill tab-visitka" data-tab="visitka">
                 <span class="tab-pill-primary">Сайт-визитка</span>
             </button>
             <button type="button" class="tab-pill tab-shop" data-tab="shop">
                 <span class="tab-pill-primary">Интернет-магазин</span>
             </button>
-            <button type="button" class="tab-pill tab-corporate" data-tab="corporate">
+            <button type="button" class="tab-pill tab-corporate" data-tab="corporateSite">
                 <span class="tab-pill-primary">Корпоративный сайт</span>
             </button>
             <button type="button" class="tab-pill tab-blog" data-tab="blog">
@@ -418,7 +428,7 @@
             <div class="nav-links">
                 <button type="button" class="nav-link" data-tab="pricing">Услуги и цены</button>
                 <button type="button" class="nav-link" data-tab="projects">Проекты</button>
-                <button type="button" class="nav-link" data-tab="corporate">Опыт и навыки</button>
+                <button type="button" class="nav-link" data-tab="experience">Опыт и навыки</button>
                 <button type="button" class="nav-link" data-tab="contact">Контакты</button>
             </div>
             <div class="contact-details">
@@ -447,6 +457,16 @@ const tabData = {
             <p class="panel-description">После реализации вы отправляете замечания — я их фиксирую и финализирую проект. Цены рассчитываются на основе масштаба задач и доступны после созвона.</p>
         </div>`,
         footer: '<strong>Готов согласовать цену после уточнения задач.</strong>'
+    },
+    fromScratch: {
+        label: 'Консультация и реализация',
+        title: 'Сайт с нуля',
+        description: 'Не знаете, как должен выглядеть и работать сайт? Помогу продумать макет, реализовать пилотную версию и довести до результата.',
+        highlights: ['Стратегическая сессия и прототипирование', 'Разработка и тестирование MVP', 'Корректировки до полного соответствия ожиданиям'],
+        extra: `<div class="panel-block">
+            <p class="panel-description">Сопровождаю процесс от идеи до релиза: согласуем макет, реализацию и доведём проект до финального результата.</p>
+        </div>`,
+        footer: 'Цена от 100 000 ₽.'
     },
     onepage: {
         label: 'Landing & коммерческие страницы',
@@ -490,12 +510,22 @@ const tabData = {
         </div>`,
         footer: 'Цена от 35 000 ₽, зависит от товарной матрицы.'
     },
-    corporate: {
+    experience: {
         label: 'Опыт и навыки',
         title: 'Frontend-разработчик',
         description: 'Работаю frontend-разработчиком уже 2 года: проектирую интерфейсы, создаю дизайн-решения, верстаю страницы, оптимизирую производительность и дорабатываю готовые продукты.',
         highlights: ['UI/UX-прототипирование и визуальные концепции', 'Адаптивная и кроссбраузерная верстка', 'Оптимизация загрузки и Core Web Vitals', 'Поддержка и рефакторинг существующих проектов'],
         footer: '<strong>Образование:</strong> Санкт-Петербургский политехнический университет Петра Великого / инженер'
+    },
+    corporateSite: {
+        label: 'Компаниям',
+        title: 'Корпоративный сайт',
+        description: 'Бизнес-сайт для компаний с несколькими страницами, блоками кейсов и интеграциями.',
+        highlights: ['Многостраничная структура и кейсы', 'Форма лидогенерации и CRM-интеграция', 'Блог/новости и управление контентом'],
+        extra: `<div class="panel-block">
+            <p class="panel-description">Вы получаете сайт, который можно легко обновлять, подключать новости и отчёты. Мы прорабатываем представление услуг, команду и преимущества.</p>
+        </div>`,
+        footer: 'Цена от 55 000 ₽.'
     },
     blog: {
         label: 'Истории и публикации',
